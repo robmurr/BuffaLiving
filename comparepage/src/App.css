@@ -1,0 +1,558 @@
+@media (max-width: 768px) {
+  .front-page .white-frame-box {
+    bottom: 80% !important;
+  }
+  .compare-page .rectangle {
+    background: linear-gradient(
+      180deg,
+      rgb(217, 217, 217) 0%,
+      rgb(115, 115, 115) 100%
+    );
+    height: 15vh !important;
+    position: relative;
+    background-position: center;
+    width: 100%;
+  }
+  .compare-page .overlap {
+    height: 100vh !important;
+  }
+  .compare-page .white-frame-box {
+    height: 85vh !important;
+  }
+
+  .compare-page .p {
+    font-size: 2vh !important;
+    margin-top: 5vh !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .compare-page .element-menu-lines {
+    margin-left: 85vw !important; 
+  }
+}
+
+.compare-page {
+  /*entire page set up*/
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.compare-page .compare-page-pt {
+  /*entire page background*/
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100vw;
+}
+
+.compare-page .overlap {
+  /*background photo*/
+  background-image: url(./photos/pexels-pixabay-256490.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  height: 150vh;
+  width: 100vw;
+}
+
+.compare-page .white-frame-box {
+  /* white box column for content*/
+  align-items: flex-start;
+  background-color: #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 138vh;
+  padding: 70px 0px;
+  position: absolute;
+  top: 0;
+  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.compare-page .rectangle {
+  /*gradient section on white box*/
+  background: linear-gradient(
+    180deg,
+    rgb(217, 217, 217) 0%,
+    rgb(115, 115, 115) 100%
+  );
+  height: 15vh;
+  position: relative;
+  background-position: center;
+  width: 100%;
+}
+
+.compare-page .top-bar {
+  align-items: center; /* Center items vertically */
+  background-color: #0071e3; /* Blue background */
+  box-shadow: 0px 4px 4px #00000040; /* Shadow effect */
+  display: flex; /* Use flexbox for layout */
+  height: 70px; /* Height of the blue bar */
+  justify-content: space-between; /* Space between items */
+  padding: 0; /* Remove padding */
+  position: absolute; /* Position at the top */
+  top: 0; /* Align to top */
+  width: 100vw; /* Full width */
+}
+
+/* Center the main icon */
+.compare-page .untitled {
+  height: 90px; /* Height of the icon */
+  width: 90px; /* Width of the icon */
+  position: absolute; /* Position relative to the top bar */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to center */
+}
+.compare-page .menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.compare-page .dropdown-menu {
+  position: absolute;
+  top: 70px; /* Positioned right below the top bar */
+  right: 20px; /* Aligns with the right of the page */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.compare-page .dropdown-menu a {
+  padding: 10px;
+  text-align: left;
+  text-decoration: none;
+  color: black;
+  font-family: "Alatsi-Regular", Helvetica;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.compare-page .dropdown-menu a:last-child {
+  border-bottom: none; /* Remove border for the last option */
+}
+
+.compare-page .dropdown-menu a:hover {
+  background-color: #f1f1f1; /* Hover effect */
+}
+
+/* Hamburger menu icon on the right */
+.compare-page .element-menu-lines {
+  height: 32px; /* Height of the hamburger icon */
+  width: 32px; /* Width of the hamburger icon */
+  margin-left: 95vw; /* Right margin for spacing */
+  margin-right: 3vw;
+  filter: invert(1);
+}
+
+.compare-page .frame-wrapper {
+  /*frame for compare property text*/
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 21px 12px;
+  left: 25vw;
+  position: absolute;
+  top: 135px;
+  width: 632px;
+}
+
+/* Compare property text positioning */
+.compare-page .div-wrapper {
+  align-items: center; /* Center items vertically */
+  display: flex;
+  gap: 10px; /* Space between items */
+  height: 64px;
+  justify-content: center; /* Center items horizontally */
+  position: relative;
+  width: 100%; /* Full width of its parent */
+}
+
+/* Container for centering the text */
+.compare-page .text-container {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center contents horizontally */
+  width: 100%; /* Full width to allow centering */
+}
+
+.compare-page .p {
+  /*compare property text styling*/
+  color: #000000;
+  flex: 1;
+  font-family: "Alatsi-Regular", Helvetica;
+  font-weight: 400;
+  height: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  font-size: calc(1vw + 1vh + 10px);
+}
+
+.compare-page .search-bar {
+  /*search bar icon*/
+  height: 10vh;
+  left: 30vw;
+  position: absolute;
+  top: 10vh;
+  width: 5vw;
+}
+.compare-page .comparison-container {
+  display: flex;
+  justify-content: center; /* Distribute space between the columns */
+  width: 100vw;
+  padding: 0 5vw;
+  box-sizing: border-box;
+}
+
+.compare-page .categories {
+  left: 21vw;
+  position: absolute;
+  top: 24.4vh;
+  width: 18vw;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center align boxes horizontally */
+}
+
+/* Blue background container */
+.compare-page .overlap-group {
+  background-color: #0071e3;
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 2vw 1vw; 
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+/* Category box (Listing, Address, etc.) */
+.compare-page .overlap-2{
+  background-color: #d9d9d9;
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 20px;
+  width: 90%;
+  height: 113px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 1.5vh;
+}
+.compare-page .overlap-3,
+.compare-page .overlap-4,
+.compare-page .overlap-5,
+.compare-page .overlap-6,
+.compare-page .overlap-group-2,
+.compare-page .overlap-7 {
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  width: 90%;
+  padding: calc(1.5vw + .7vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 2.5vh;
+}
+
+/* Last box without margin at the bottom */
+.compare-page .overlap-7 {
+  margin-bottom: 0; /* Prevents extra space after the last box */
+}
+
+/* Text inside each category box */
+.compare-page .text-wrapper-2,
+.compare-page .text-wrapper-3,
+.compare-page .text-wrapper-4,
+.compare-page .text-wrapper-5,
+.compare-page .text-wrapper-6,
+.compare-page .text-wrapper-7,
+.compare-page .text-wrapper-8 {
+  color: #000;
+  font-family: "Alatsi-Regular", Helvetica;
+  font-size: 2vw; /* Responsive font size */
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Container for apartment information */
+.compare-page .compare {
+  height: 1057px;
+  left: 40vw;
+  position: absolute;
+  top: 24.4vh;
+  width: 19vw;
+}
+/* Photo section for the apartment (move this to the top) */
+.compare-page .overlap-group-3 {
+  background-image: url(./photos/1601-W-School-St-304-7.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 20px;
+  width: 90%;
+  height: 113px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 1.5vh;
+}
+
+/* Individual boxes for each apartment info (Address, Square footage, etc.) */
+.compare-page .overlap-8 {
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  width: 90%;
+  padding: 1.2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 2.5vh;
+}
+.compare-page .overlap-9,
+.compare-page .overlap-10,
+.compare-page .overlap-11,
+.compare-page .overlap-12,
+.compare-page .overlap-13 {
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  width: 90%;
+  padding: 1.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 2.5vh;
+}
+
+/* Text inside each box (Address, Square footage, etc.) */
+.compare-page .text-wrapper-9 {
+  /* Address */
+  color: #000000;
+  font-family: "Alatsi-Regular", Helvetica;
+  font-size: 2vw; 
+  font-weight: 400;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+  
+}
+.compare-page .text-wrapper-10, /* Square footage */
+.compare-page .text-wrapper-11, /* Bed/Bath */
+.compare-page .text-wrapper-12, /* Price */
+.compare-page .text-wrapper-13, /* Amenities */
+.compare-page .text-wrapper-14  /* Rating */ {
+  color: #000000;
+  font-family: "Alatsi-Regular", Helvetica;
+  font-size: 2vw; 
+  font-weight: 400;
+  text-align: center;
+  white-space: normal; 
+  word-wrap: break-word; 
+}
+
+/* Text inside the photo box */
+.compare-page .text-wrapper-15 {
+  color: #ffffff;
+  font-family: "Alatsi-Regular", Helvetica;
+  font-size: 2vw; /* Responsive font size */
+  font-weight: 400;
+  text-align: center;
+}
+.compare-page .overlap-wrapper {
+  /*apartment 2 column*/
+  /* height: 1057px; */
+  left: 20vw;
+  position: absolute;
+  top: 0vh;
+  width: 19vw;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+.compare-page .text-wrapper-16 {
+  color: #000000;
+  font-family: "Alatsi-Regular", Helvetica;
+  font-size: 2vw; /* Responsive font size */
+  font-weight: 400;
+  text-align: center;
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Enable word wrapping */
+}
+.compare-page .overlap-17 {
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  width: 90%; /* Ensure same width */
+  padding: 1.5vw; /* Use consistent padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 2.5vh; /* Ensure same margin */
+}
+
+.compare-page .text-wrapper-20 {
+  color: #000000;
+  font-family: "Alatsi-Regular", Helvetica;
+  font-size: 2vw;
+  font-weight: 400;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+}
+.compare-page .text-wrapper-18,
+.compare-page .text-wrapper-19,
+.compare-page .text-wrapper-17,
+.compare-page .text-wrapper-21 {
+  color: #000000;
+  font-family: "Alatsi-Regular", Helvetica;
+  font-size: 2vw; /* Responsive font size */
+  font-weight: 400;
+  text-align: center;
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Enable word wrapping */
+}
+
+.compare-page .text-wrapper-22 {
+  color: #ffffff;
+  font-family: "Alatsi-Regular", Helvetica;
+  font-size: 2vw; 
+  font-weight: 400;
+  text-align: center;
+}
+
+.compare-page .overlap-15 {
+  background-image: url(./photos/spacejoy-xkJ2_THgKmk-unsplash.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 20px;
+  width: 90%;
+  height: 113px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 1.5vh;
+}
+
+.compare-page .rectangle-4 {
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  height: 955px;
+  left: 877px;
+  position: absolute;
+  top: 453px;
+  width: 10px;
+}
+
+.compare-page .overlap-20 {
+  /*address box*/
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  width: 90%;
+  padding: 1.2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 2.5vh;
+}
+.compare-page .overlap-14,
+.compare-page .overlap-16,
+/* .compare-page .overlap-17, */
+.compare-page .overlap-18,
+.compare-page .overlap-19 {
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  width: 90%;
+  padding: 1.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 2.5vh;
+}
+.remove-btn {
+  background-color: #f28484;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 2vw;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  display: block;
+  width: 15vw;
+  text-align: center;
+}
+
+.remove-btn:hover {
+  background-color: #adb1f4;
+}
+.dropdown-menu .user-info {
+  display: flex;
+  align-items: center;
+  padding: 1vw; /* Adjusts padding dynamically */
+  border-bottom: 1px solid #ddd;
+}
+
+.user-info .profile-photo {
+  width: 5vw; /* Adjusted for more responsive size */
+  height: 5vw;
+  max-width: 50px; /* Max width and height for larger screens */
+  max-height: 50px;
+  border-radius: 50%;
+  margin-right: 1vw;
+  object-fit: cover;
+}
+
+.user-info .profile-photo-placeholder {
+  width: 5vw;
+  height: 5vw;
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(1vw + 10px); /* Dynamic font size for responsiveness */
+  color: #888;
+  margin-right: 1vw;
+}
+.buffaliving {
+  position: absolute;
+  color: white;
+  left: 3vw;
+  font-size: large;
+}
