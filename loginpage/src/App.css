@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('imgs/sweethomes.jpg'), linear-gradient(to top, rgba(173, 216, 230, 0.8), rgba(173, 216, 230, 0) 50%);
+  /* The gradient starts with a heavier blue color (#add8e6), fades out as it goes to the middle (50%)  */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.login-box {
+  background-color: #d9d9d9; /* Grey background for the login box */
+  padding: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 400px;
+  height: 460px;
+  text-align: center;
+}
+
+.logo {
+  width: 100px; /* Adjust the size of the logo image */
+  margin-bottom: 20px; /* Add spacing between the logo and the title */
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: black; /* White text for contrast against the grey box */
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: white; /* White labels for the inputs */
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-btn {
+  background-color: #0071e3;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-btn:hover {
+  background-color: #0071e3;
+}
+
+.bottom-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 10px; /* Add padding around the buttons */
+}
+
+.signup-btn, .forgot-password-btn {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 5px 44px; /* Add padding inside the buttons to create more space */
+}
+
+.signup-btn {
+  margin-left: auto; /* Pushes the sign-up button to the right */
+}
+
+.forgot-password-btn {
+  margin-right: auto; /* Pushes the forgot password button to the left */
+}
+
+.signup-btn:hover, .forgot-password-btn:hover {
+  color: #4CAF50;
+  text-decoration: none;
+}

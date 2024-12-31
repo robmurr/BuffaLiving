@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://se-dev.cse.buffalo.edu/CSE442/2024-Fall/hrlin/fa24-semesterproject-noproblems-1/static/JPG/pexels-jared-lung-503187-2111892.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Chat wrapper adjustments for responsiveness */
+.chat-wrapper {
+    background-color: #f0f0f0;
+    width: 90%; /* Reduce width for smaller screens */
+    max-width: 800px; /* Still limit width for large screens */
+    height: 90vh;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Blue Header */
+.header {
+    background-color: #087cfc;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatheader {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #0071e3;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    left: 10px;
+    font-size: large;
+}
+
+/* Adjust logo size */
+.header img {
+        width: 75px; /* Adjust size as needed */
+        height: 43px; /* Adjust size as needed */
+}
+
+
+/* Message Input Field */
+.message-input {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Input box styling */
+.message-input input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+/* Dropdown Menu */
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.menu-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.menu:hover .menu-content {
+    display: block;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .chat-wrapper {
+        width: 95%; /* Reduce width for medium screens */
+    }
+
+    .header img {
+        filter: brightness(0) invert(1);
+        color: white;
+        width: 90px;
+        height: 90px;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-wrapper {
+        width: 100%; /* Full width for smaller screens */
+        height: 95vh; /* Allow more height for small screens */
+    }
+
+    .header {
+        padding: 8px;
+    }
+
+    .header img {
+        filter: brightness(0) invert(1);
+        color: white;
+        width: 90px;
+        height: 90px;
+        z-index: 1;
+    }
+
+    .chat-box {
+        margin: 5px;
+        padding: 10px;
+        overflow-y: auto;
+    }
+
+    .message-input input {
+        margin: 0 10px;
+    }
+}
+
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns other-user messages to the left by default */
+    overflow-y: auto;
+    max-height: 864px;
+}
+
+/* Chat Box Area (Gray area) */
+.chat-box2 {
+    flex: 1;
+    background-color: #d3d3d3;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.chat-bubble {
+    max-width: 60%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+    word-wrap: break-word;
+    background-color: #f1f1f1;
+    display: inline-flex;
+    align-self: flex-start;
+    white-space: pre-wrap; /* Preserves spacing and breaks */
+}
+
+.current-user-bubble {
+    align-self: flex-end;
+    background-color: #0071e3;
+    color: white;
+}
+
+.other-user-bubble {
+    align-self: flex-start;
+    background-color: #a9a9a9;
+    color: black;
+}
+
+.chat-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Styling for each user chat bubble */
+.user-chat {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.user-chat:hover {
+    background-color: #f1f1f1;
+}
+
+.user-avatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-details h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.user-details p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Additional responsiveness for user chat */
+@media (max-width: 768px) {
+    .user-avatar img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .user-details h3 {
+        font-size: 16px;
+    }
+
+    .user-details p {
+        font-size: 12px;
+    }
+}
+
+
+.add-button {
+    position: fixed; /* Fixes position to the bottom-right corner */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 50%; /* Round shape */
+    width: 50px; /* Button width */
+    height: 50px; /* Button height */
+    font-size: 24px; /* Icon size */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.add-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Container for user info */
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 1vw; /* Adjusts padding dynamically */
+    border-bottom: 1px solid #ddd; /* Divider line for clarity */
+    font-family: Arial, sans-serif; /* Font style */
+    justify-content: flex-start; /* Ensure elements align from the left */
+  }
+  
+  /* Profile photo styling */
+  .user-info img.profile-photo {
+    width: 5vw; /* Responsive width */
+    height: 5vw; /* Responsive height */
+    max-width: 50px; /* Max dimensions for larger screens */
+    max-height: 50px;
+    border-radius: 50%; /* Circular profile photo */
+    margin-right: 1vw; /* Space between photo and text */
+    object-fit: cover; /* Ensure the image fits well within the circle */
+  }
+  
+  /* Placeholder for missing profile photo */
+  .user-info .profile-photo-placeholder {
+    width: 5vw; /* Responsive width */
+    height: 5vw; /* Responsive height */
+    max-width: 50px; /* Max dimensions for larger screens */
+    max-height: 50px;
+    border-radius: 50%; /* Circular placeholder */
+    background-color: #ddd; /* Neutral background for placeholder */
+    display: flex; /* Center alignment for '?' */
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1vw + 8px); /* Adjust font size dynamically, make smaller */
+    color: #888; /* Grey color for the placeholder text */
+    margin-right: 1vw; /* Space between placeholder and text */
+  }
+  
+  /* Text styling */
+  .user-info p {
+    margin: 0; /* Remove default margins for inline alignment */
+    font-size: calc(1vw + 8px); /* Adjust font size dynamically, smaller size */
+    color: #333; /* Neutral text color for better readability */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+.buffaliving {
+    position: absolute;
+    color: white;
+    left: 10px;
+    font-size: large;
+}

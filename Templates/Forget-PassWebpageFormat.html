@@ -1,0 +1,43 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Reset</title>
+    <link rel="stylesheet" type="text/css" href="../static/CSS/Style.css">
+</head>
+<body>
+<div class="background">
+    <div class="container">
+        <div class="reset-box">
+            <div class="icon-container">
+                <img src="../static/JPG/House_Icon.png" alt="House Icon">
+            </div>
+            <h2>Password Reset</h2>
+            <p id="message"></p>
+            <div id="message-container"></div>
+            <form id="resetForm" action="PasswordReset.php" method="POST">
+                <div class="input-group">
+                    <label for="email"><i class="icon-email"></i></label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="new_password"><i class="icon-lock"></i></label>
+                    <input type="password" id="new_password" name="new_password" placeholder="New Password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirm_password"><i class="icon-lock"></i></label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+                </div>
+                <div class="help-contact-container">
+                    <span class="help-text">Need More Help?</span>
+                    <span class="contact-text">Contact Us</span>
+                </div>
+                <button type="submit" id="resetButton">Reset Password</button>
+            </form>
+        </div>
+    </div>
+</div>
+</form>
+<script src="/static/JS/WebpageFunction.JS"></script>
+</body>
+</html>

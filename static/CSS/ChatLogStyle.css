@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Container takes full height */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://se-dev.cse.buffalo.edu/CSE442/2024-Fall/hrlin/fa24-semesterproject-noproblems-1/static/JPG/pexels-jared-lung-503187-2111892.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Chat wrapper */
+.chat-wrapper {
+    background-color: #f0f0f0;
+    width: 90%; /* Reduce width for smaller screens */
+    max-width: 800px; /* Still limit width for large screens */
+    height: 90vh;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chatheader {
+    background-color: #0071e3;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Top Blue Header */
+.header {
+    background-color: #0071e3;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Adjust logo size */
+/* Adjust logo size */
+.header img {
+    width: 80px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+}
+
+/* Dropdown Menu */
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.menu-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.menu:hover .menu-content {
+    display: block;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .chat-wrapper {
+        width: 95%; /* Reduce width for medium screens */
+    }
+
+    .header img {
+        filter: brightness(0) invert(1);
+        color: white;
+        width: 90px;
+        height: 90px;
+        z-index: 1;
+          
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-wrapper {
+        width: 100%; /* Full width for smaller screens */
+        height: 95vh; /* Allow more height for small screens */
+    }
+
+    .header {
+        padding: 8px;
+    }
+
+    .header img {
+        filter: brightness(0) invert(1);
+        color: white;
+        width: 90px;
+        height: 90px;
+        z-index: 1;
+    }
+
+    .chat-box {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .message-input input {
+        margin: 0 10px;
+    }
+}
+
+/* Container for user info */
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 1vw; /* Adjusts padding dynamically */
+    border-bottom: 1px solid #ddd; /* Divider line for clarity */
+    font-family: Arial, sans-serif; /* Font style */
+    justify-content: flex-start; /* Ensure elements align from the left */
+  }
+  
+  /* Profile photo styling */
+  .user-info img.profile-photo {
+    width: 5vw; /* Responsive width */
+    height: 5vw; /* Responsive height */
+    max-width: 50px; /* Max dimensions for larger screens */
+    max-height: 50px;
+    border-radius: 50%; /* Circular profile photo */
+    margin-right: 1vw; /* Space between photo and text */
+    object-fit: cover; /* Ensure the image fits well within the circle */
+  }
+  
+  /* Placeholder for missing profile photo */
+  .user-info .profile-photo-placeholder {
+    width: 5vw; /* Responsive width */
+    height: 5vw; /* Responsive height */
+    max-width: 50px; /* Max dimensions for larger screens */
+    max-height: 50px;
+    border-radius: 50%; /* Circular placeholder */
+    background-color: #ddd; /* Neutral background for placeholder */
+    display: flex; /* Center alignment for '?' */
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1vw + 8px); /* Adjust font size dynamically, make smaller */
+    color: #888; /* Grey color for the placeholder text */
+    margin-right: 1vw; /* Space between placeholder and text */
+  }
+  
+  /* Text styling */
+  .user-info p {
+    margin: 0; /* Remove default margins for inline alignment */
+    font-size: calc(1vw + 8px); /* Adjust font size dynamically, smaller size */
+    color: #333; /* Neutral text color for better readability */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+  
+  .buffaliving {
+      position: absolute;
+      color: white;
+      left: 10px;
+      font-size: large;
+  }
