@@ -1,11 +1,11 @@
 # BuffaLiving || CSE 442 Team !(NoProblems)
 ## Contributors:
-PM: Sangima Sherpa
-Robert Murray
-David Huang
-Harry Lin
-Justin Dvorsky
-Tauhidur Anjan
+PM: Sangima Sherpa <br />
+Robert Murray <br />
+David Huang <br />
+Harry Lin <br />
+Justin Dvorsky <br />
+Tauhidur Anjan <br />
 
 ## Purpose
 This project was created during the Fall 2024 semester for CSE 442 at the University at Buffalo.
